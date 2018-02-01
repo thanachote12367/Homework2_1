@@ -8,7 +8,7 @@ def calculate_age(born):
     return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
 
 @app.route("/age", methods = ['POST'])
-def timestamp():
+def age():
     if request.method == 'POST':
         try:
             day = request.form.get('day')
